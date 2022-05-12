@@ -142,9 +142,9 @@ func CreateAccessToken(w http.ResponseWriter, r *http.Request) {
 	})
 
 	response := &struct {
-		Token string
+		Status int
 	}{
-		Token: tokenString,
+		Status: 0,
 	}
 	json.NewEncoder(w).Encode(response)
 }
